@@ -54,13 +54,19 @@ public class GameData {
 	private void setCharClass(String str, String name) {
 		str = str.toLowerCase();
 		switch (str) {
-		case "mage":
-			player = new Mage(this, name);
-			break;
-		default:
-			echo("That is either made up or an incredibly shitty adventuring career. Choose again."
-					+" (valid: mage)");
-			break;
+			case "mage":
+				player = new Mage(this, name);
+				break;
+			case "fighter":
+				player = new Fighter(this, name);
+				break;
+			case "reaper":
+				player = new Reaper(this, name);
+				break;
+			default:
+				echo("That is either made up or an incredibly shitty adventuring career. Choose again."
+						+" (valid: mage, fighter)");
+				break;
 		}
 		if (player != null) {
 			echo("You are " + name + ", the " + str + ".");

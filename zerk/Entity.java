@@ -68,4 +68,13 @@ public abstract class Entity {
 		hp -= damage;
 		trigger("damage", damage +"");
 	}
+	
+	public void addEffect(String name, Effect effect){
+		effects.put(name, effect);
+		effect.apply()
+	}
+	
+	public void removeEffect(String name){
+		effects.remove(name).remove();
+	}
 }

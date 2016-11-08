@@ -3,7 +3,7 @@ package zerk;
 import zerk.entity.Foe;
 import zerk.entity.Player;
 import zerk.entity.foe.RandomEnemy;
-import zerk.entity.player.Mage;
+import zerk.entity.player.*;
 import zerk.lambda.Lambda;
 import zerk.map.World;
 

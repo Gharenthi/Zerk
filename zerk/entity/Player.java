@@ -31,7 +31,7 @@ public abstract class Player extends Entity {
 			out.put("regen_life", new HashMap<String, Lambda>());
 			out.put("regen_mana", new HashMap<String, Lambda>());
 			
-			out.get("death").put("die", param -> effects.put("dead", new Effect()));
+			out.get("death").put("die", param -> addEffect("dead", new Effect()));
 
 			out.get("overcharge_mana").put("message", param -> data.echo("Overcharged " + param + " mana!"));
 			out.get("overcharge_mana").put("damage", param -> hp -= Integer.parseInt(param));

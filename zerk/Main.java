@@ -61,11 +61,9 @@ public class Main extends Application{
 		inputBox.addEventHandler(KeyEvent.ANY, (event) -> {
 			if (event.getCode() == KeyCode.ENTER){
 				String str = inputBox.getText();
-				if (str != null){
-					if (! str.equals("")){
-						inputBox.setText(null);
-						submitText(str);
-					}
+				if (str != null && !str.equals("")){
+					inputBox.setText(null);
+					submitText(str);
 				}
 			}
 		});
